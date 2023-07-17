@@ -1,0 +1,7 @@
+{
+  "name": "mymusic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
