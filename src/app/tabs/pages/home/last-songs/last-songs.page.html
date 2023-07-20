@@ -1,0 +1,16 @@
+<div class="mm_lastsongs">
+  <div class="mm_lastsongs_content">
+    <div class="mm_lastsongs_content_title">
+      <h1 class="mm_lastsongs_content_title_text">Continue listening</h1>
+    </div>
+    <div class="mm_lastsongs_content_items">
+        <div class="mm_lastsongs_content_items_content" >
+            <div class="mm_lastsongs_content_items_content_item" *ngFor="let song of songs"(click)=" playSong(song)" >
+                <img src="{{song.img}}" />
+               <p>{{song.title}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+

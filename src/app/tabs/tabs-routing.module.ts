@@ -9,19 +9,19 @@ const routes: Routes = [
     children: [
       {
         path: 'tab1',
-        loadChildren: () => import('../home/tab1.module').then(m => m.Tab1PageModule)
+        loadChildren: () => import('./pages/home/tab1.module').then(m => m.Tab1PageModule)
       },
       {
         path: 'tab2',
-        loadChildren: () => import('../explore/tab2.module').then(m => m.Tab2PageModule)
+        loadChildren: () => import('./pages/explore/tab2.module').then(m => m.Tab2PageModule)
       },
       {
         path: 'tab3',
-        loadChildren: () => import('../library/tab3.module').then(m => m.Tab3PageModule)
+        loadChildren: () => import('./pages/library/tab3.module').then(m => m.Tab3PageModule)
       },
       {
         path: 'song',
-        loadChildren: () => import('../song/song.module').then( m => m.SongPageModule)
+        loadChildren: () => import('./pages/song/song.module').then( m => m.SongPageModule)
       },
       {
         path: '',

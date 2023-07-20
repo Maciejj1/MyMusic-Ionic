@@ -1,0 +1,38 @@
+.mm_nav{
+  &_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_left{ padding-left: 10px;
+      display: flex;
+      align-items: center;
+&_image{
+
+  &_picture{
+    width: 50px;
+  }
+  width: 70px;
+}
+&_text{
+  &_title{
+font-size: 16px;
+line-height: 0;
+  }
+  &_name{
+font-size: 13px;
+  }
+}
+    }
+&_icons{
+  padding-right: 10px;
+display: flex;
+justify-content: end;
+&_icon{
+  width: 20px;
+  height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+}
+  }
+}

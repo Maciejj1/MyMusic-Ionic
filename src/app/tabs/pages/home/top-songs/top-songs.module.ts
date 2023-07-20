@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LastSongsPageRoutingModule } from './last-songs-routing.module';
+import { TopSongsPageRoutingModule } from './top-songs-routing.module';
 
-import { LastSongsPage } from './last-songs.page';
+import { TopSongsPage } from './top-songs.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LastSongsPageRoutingModule
+    TopSongsPageRoutingModule
   ],
-  declarations: [LastSongsPage]
+  declarations: []
 })
-export class LastSongsPageModule {}
+export class TopSongsPageModule {}

@@ -1,37 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>song</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <ion-header>
-    <ion-label>Songs</ion-label>
-  </ion-header>
-
-  <ion-item lines="none" *ngFor="let song of songs" (click)="playSong(song.title, song.subtitle, song.img, song.path)">
-    <ion-thumbnail slot="start">
-      <img [src]="song.img" />
-    </ion-thumbnail>
-    <ion-label>
-      <h2>{{song.title}}</h2>
-      <p>{{song.subtitle}}</p>
-    </ion-label>
-  </ion-item>
-</ion-content>
-
-<div class="ion-text-center" id="fullPlayer">
-  <ion-toolbar>
+<div class="mm_musicplayer" id="fullPlayer">
+  <div class="mm_musicplayer_content">
+      <div class="mm_musicplayer_content_header">
     <ion-buttons slot="end">
       <ion-button (click)="minimize()">Minimize</ion-button>
     </ion-buttons>
-  </ion-toolbar>
+  </div>
+<div class="mm_musicplayer_content_item">
+  <div class="mm_musicplayer_content_item_image">
+      <img class="mm_musicplayer_content_item_image_picture"[src]="currImage" alt="" id="currImg">
+  </div>
+  <div class="mm_musicplayer_content_item_text">
+    <h2 class="mm_musicplayer_content_item_text_title">{{currTitle}}</h2>
+    <p class="mm_musicplayer_content_item_text_subtitle"> {{currSubtitle}}</p>
+</div>
+</div>
+<div class="mm_musicplayer_content_duration">
 
-  <img [src]="currImage" alt="" id="currImg">
-  <h2>{{currTitle}}</h2>
-  <p>{{currSubtitle}}</p>
-
-  <ion-item lines="none">
     <ion-range #range (ionChange)="touchMove()" (ionBlur)="touchEnd()" (ionFocus)="touchStart()">
       <ion-label slot="start">
         <ion-text>
@@ -44,7 +28,9 @@
         </ion-text>
       </ion-label>
     </ion-range>
-  </ion-item>
+
+</div>
+<div class="mm_musicplayer_content_buttons">
   <ion-button fill="clear" mode="ios" (click)="playPrev()">
     <ion-icon name="play-skip-back-outline" style="font-size:30px"></ion-icon>
   </ion-button>
@@ -57,12 +43,13 @@
   <ion-button fill="clear" mode="ios" (click)="playNext()">
     <ion-icon name="play-skip-forward-outline" style="font-size:30px"></ion-icon>
   </ion-button>
-
+</div>
+<div class="mm_musicplayer_content_next">
   <ion-list-header>
-    Up next
+    Następny w kolejce
   </ion-list-header>
   <!--up next song-->
-  <ion-item>
+ <div class=" mm_musicplayer_content_next_item">
     <ion-thumbnail slot="start">
       <img [src]="upNextImg" />
     </ion-thumbnail>
@@ -70,9 +57,10 @@
       <h2>{{upNextTitle}}</h2>
       <p>{{upNextSubtitle}}</p>
     </ion-label>
-  </ion-item>
 </div>
-
+</div>
+  </div>
+</div>
 <!--- minimized player view-->
 <ion-toolbar id="miniPlayer">
   <ion-item>

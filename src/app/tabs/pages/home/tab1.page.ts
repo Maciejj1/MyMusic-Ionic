@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
+  onSongSelected(song: any) {
+    // You can access the selected song here and perform any necessary actions
+    console.log('Selected Song:', song);
+  }
   constructor() {}
 
 }
